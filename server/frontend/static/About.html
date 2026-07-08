@@ -1,68 +1,126 @@
 <html>
 <head>
-  <!-- Link the style sheet here -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <style>
+        .custom-navbar {
+            background-color: #f8f9fa; /* Light gray background */
+            border-bottom: 1px solid #ddd; /* Add a subtle bottom border */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .about-card {
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .banner-header {
+            background-color: #e9ecef; /* Slightly darker gray for header */
+            padding: 40px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+        }
+
+        .card-group-custom {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 0;
+        }
+
+        .staff-card {
+            border: none;
+            text-align: center;
+        }
+
+        .card-img-top-custom {
+            border-radius: 50%; /* Make staff photos circular */
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .staff-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+
+        .staff-title {
+            color: #777;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">Best Cars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
+    </nav>
     
-</div>
+    <div class="container mt-5">
+        <div class="card about-card">
+            <div class="banner-header">
+                <h1>About Us</h1>
+                <p>
+                    For over two decades, Best Cars has been a trusted leader in providing high-quality domestic and imported vehicles to customers across North America. We are dedicated to delivering exceptional value and transparent, fair pricing on every car in our inventory.
+                </p>
+            </div>
+            <div class="card-group-custom">
+                <!-- Person 1 (Using person.png, which will render as an actual photo) -->
+                <div class="card staff-card" style="width: 30%;">
+                    <img class="card-img-top-custom" src="/static/person1.png" alt="Staff Member 1">
+                    <div class="card-body">
+                        <p class="staff-name">Robert Smith</p>
+                        <p class="staff-title">Founder & CEO</p>
+                        <p class="card-text">Robert started Best Cars with a vision to make car buying a transparent and enjoyable experience. His leadership is central to our commitment to excellence.</p>
+                        <p class="staff-email">robert.smith@bestcars.com</p>
+                    </div>
+                </div>
 
+                <div class="card staff-card" style="width: 30%;">
+                    <img class="card-img-top-custom" src="/static/person1.png" alt="Staff Member 2">
+                    <div class="card-body">
+                        <p class="staff-name">Jennifer Chen</p>
+                        <p class="staff-title">Head of Sales</p>
+                        <p class="card-text">Jennifer leads our sales team with a passion for helping clients find the perfect vehicle to fit their needs and lifestyle.</p>
+                        <p class="staff-email">jennifer.chen@bestcars.com</p>
+                    </div>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="card staff-card" style="width: 30%;">
+                    <img class="card-img-top-custom" src="/static/person1.png" alt="Staff Member 3">
+                    <div class="card-body">
+                        <p class="staff-name">Michael Davies</p>
+                        <p class="staff-title">Service Manager</p>
+                        <p class="card-text">Michael oversees our service department, ensuring every vehicle is rigorously inspected and maintained to the highest standards.</p>
+                        <p class="staff-email">michael.davies@bestcars.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

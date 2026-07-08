@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Cars</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #002c5b;
+            --accent-color: #00a8cc;
+            --text-dark: #2b2b2b;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Customization */
+        .custom-navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--text-light) !important;
+            padding: 0.5rem 1.2rem !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--accent-color) !important;
+        }
+
+        /* Contact Container & Grid */
+        .contact-container {
+            max-width: 1140px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: none;
+            overflow: hidden;
+        }
+
+        .contact-grid {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .contact-column {
+            display: table-cell;
+            vertical-align: top;
+            padding: 50px;
+        }
+
+        .info-sidebar {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40%;
+        }
+
+        .form-content {
+            width: 60%;
+        }
+
+        /* Info Sidebar Elements */
+        .info-sidebar h2 {
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .info-sidebar p {
+            color: #bdcddc;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .info-item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--accent-color);
+        }
+
+        .info-item-text {
+            color: #e2eaf0;
+            line-height: 1.5;
+        }
+
+        /* Form Elements */
+        .form-content h2 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .form-subtitle {
+            color: var(--text-light);
+            margin-bottom: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .form-control-custom {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e5eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(0, 168, 204, 0.1);
+        }
+
+        textarea.form-control-custom {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: #008cae;
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Breakdowns via standard block layout adjustments */
+        @media (max-width: 768px) {
+            .contact-grid, .contact-column {
+                display: block;
+                width: 100%;
+            }
+            .info-sidebar {
+                padding: 40px 30px;
+            }
+            .form-content {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">Best Cars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="contact-container">
+        <div class="card contact-card">
+            <div class="contact-grid">
+                
+                <!-- Left Column: Contact Info Sidebar -->
+                <div class="contact-column info-sidebar">
+                    <h2>Contact Info</h2>
+                    <p>Have questions about a specific model or want to schedule a test drive? Reach out to our team directly.</p>
+                    
+                    <div class="info-item">
+                        <div class="info-item-title">Our Showroom</div>
+                        <div class="info-item-text">
+                            100 Showroom Blvd,<br>
+                            Pinheiros, São Paulo, SP
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-item-title">Call Us</div>
+                        <div class="info-item-text">
+                            +55 (11) 5555-0199<br>
+                            Mon - Sat: 9:00 AM - 7:00 PM
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-item-title">Email Support</div>
+                        <div class="info-item-text">
+                            contact@bestcars.com<br>
+                            sales@bestcars.com
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Form -->
+                <div class="contact-column form-content">
+                    <h2>Get In Touch</h2>
+                    <p class="form-subtitle">Fill out the form below and a representative will get back to you within 24 hours.</p>
+                    
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control-custom" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control-custom" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control-custom" placeholder="Inquiry about vehicle availability" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control-custom" placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
