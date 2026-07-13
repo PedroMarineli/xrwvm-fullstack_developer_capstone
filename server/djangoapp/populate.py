@@ -91,4 +91,3 @@ def initiate():
             year=data['year'],
             dealer_id=data['dealer_id']
         )
-        
