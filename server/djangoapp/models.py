@@ -1,14 +1,13 @@
-from django.db import models
-from django.utils.timezone import now
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.db import models
 
 # Create your models here.
+
 
 # Car Make Model
 class CarMake(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    # Você pode adicionar outros campos aqui se desejar (ex: country)
 
     def __str__(self):
         return self.name
@@ -16,9 +15,10 @@ class CarMake(models.Model):
 
 # Car Model Model
 class CarModel(models.Model):
-    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)  # Many-to-One relationship
+    # Many-to-One relationship
+    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    
+
     # Campo para o ID do Dealer (referência ao banco Cloudant)
     dealer_id = models.IntegerField()
 
@@ -30,7 +30,7 @@ class CarModel(models.Model):
         ('HATCHBACK', 'Hatchback')
     ]
     type = models.CharField(max_length=10, choices=CAR_TYPES, default='SUV')
-    
+
     # Ano com validação entre 2015 e 2023 conforme as instruções do lab
     year = models.IntegerField(
         default=2023,
@@ -41,4 +41,5 @@ class CarModel(models.Model):
     )
 
     def __str__(self):
-        return f"{self.car_make.name} {self.name}"  # Retorna Make + Model para melhor identificação
+        # Retorna Make + Model para melhor identificação
+        return f"{self.car_make.name} {self.name}"
