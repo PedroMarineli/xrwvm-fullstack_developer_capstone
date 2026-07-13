@@ -43,3 +43,4 @@ class CarModel(models.Model):
     def __str__(self):
         # Retorna Make + Model para melhor identificação
         return f"{self.car_make.name} {self.name}"
+        
